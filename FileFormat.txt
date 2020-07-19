@@ -1,0 +1,107 @@
+//University File
+Uni_name,
+dept_count,depName	//3,EE CS MM
+std_count,stdRN		//3, 19232,18232,1231
+faculty_count,empID	//4,1762,1211,1431
+hod_count,empID		//3,1762,1211,1431
+TA_count,stdRN;		//1,15478
+
+//Populate MasterLists with these
+
+//Open DepartmentMasterList
+DeptCount
+DeptName,ITManager_empID
+//Close DepartmentMasterList
+
+
+//Open MasterRegistrations File --> add all to MasterList of Department
+RN,CourseID
+RN,CourseID
+//Close MasterRegistrations File
+
+//Open MasterStudentsList File --> send Student Data to PConstrucor
+Name,username,password,rollno
+Name,username,password,rollno
+//Close MasterStudentsList File
+
+//Open MasterTeacher List File --> send Teacher Data to PConstructor
+Name,username,password,empID,PrimaryDepName
+Name,username,password,empID,PrimaryDepName
+//Close MasterTeacher File
+
+//Open MasterHODList
+Name,username,password,empID,PrimaryDepName,courseCount,CourseID1,CourseID2,CourseID3
+Name,username,password,empID,PrimaryDepName,courseCount,CourseID1,CourseID2,CourseID3
+//Close MasterHODList
+
+//Open MasterITManagerList
+Name,username,password,empID
+Name,username,password,empID
+//Close MasterITManagerList
+
+//Open MasterCoursesList --> in Department
+DepName,CourseCount;
+courseID,courseName,stdCount,instructor_empID,TA_RollNo
+DepName,CourseCount;
+courseID,courseName,stdCount,instructor_empID,TA_RollNo
+//Close CoursesMasterList
+
+//Open MasterTAList
+Name,username,pw,TACID,depName,rollno,empID
+//Close MasterTAList
+
+//Open StudentListbyCourses-->in Courses
+DepName,CourseCount
+CourseID,StudentCount;
+RN,RN,RN,RN
+//Close StudentListByCourses
+
+//Open TeacherbyDept
+DeptName,TeacherCount;
+empID,empID,empID
+DeptName,TeacherCount;
+empID,empID,empID
+//Close TeacherbyDept
+
+//Open EvalbyCourse+Student
+DeptName
+CourseID,studentCount,evalInitializerBOOL,weightage[5];
+RN,quizcount,q1,q2,q3,asgcount,asg1,asg2,asg3,mid,project,final,totalabs,gpa,grade,boolWithdraw
+
+//Close EvalbyCourse+Student
+
+//Open AttendanceByCourse
+DepName
+CourseID,stdCount,totalLectures,boolInitialize;
+RN,i,i,i,i,i,i,i,i,i,i,i,i,i   //ixtotalLectures 
+//Close AttendanceByCourse
+
+//Handled in TeacherMasterList
+//Open CoursebyTeacher
+empID,coursecount;
+CourseID,CourseID,CourseID
+//Close CoursebyTeacher
+
+//Handled in StudentListbyCourses
+//Open StudentListbyDepartment-->in Department
+DepName,StudentCount;
+RN,RN,RN,RN
+DepName,StudentCount;
+RN,RN,RN,RN
+//Close StudentListByDepartment
+
+//DONE WITH STDLISTBYCOURSES 
+//Open RegistrationsByStudent
+RN,regCount;
+CourseID,CourseID,CourseID,CourseID
+RN,regCount;
+CourseID,CourseID,CourseID,CourseID
+//Close RegistrationsByStudent
+
+//DONE WITH STDLISTBYCOURSES
+//Open RegistrationsByCourse
+CourseID,regCount;
+RN,RN,RN
+CourseID,regCount;
+RN,RN,RN
+//Close RegistrationsByCourse

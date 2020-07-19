@@ -1,0 +1,5 @@
+
+EE,3
+CS117A,Programming Fundamentals A,2,1345,2311
+EE221A,Assembly Language A,2,1745,4711
+MT224A,Advanced Calculus B,0,1745,7411
